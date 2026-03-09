@@ -1,5 +1,4 @@
 import { useState } from "react";
-import "./ListItems.css";
 import { Trash } from "phosphor-react";
 import { MdEdit } from "react-icons/md";
 
