@@ -21,9 +21,9 @@ interface PropsTasks {
     const [controll, setControll] = useState<boolean>(true);
 
     return (
-      <div className="mt-10 md:w-120 w-89">
+      <div className="mt-5 w-89">
         {tasks.map((task, index) => (
-          <div key={index} className={`flex shadow-lg justify-between items-center border hover:bg-gray-200 transform hover:scale-105 duration-300 border-gray-200 cursor-pointer  mt-2 ${controll ? "funning" : ""}`}>
+          <div key={index} className={`flex shadow-lg justify-between mt-2 items-center border hover:bg-gray-200 transform hover:scale-105 duration-300 border-gray-200 cursor-pointer ${controll ? "funning" : ""}`}>
             <div className="md:flex">
               <p
                 style={{

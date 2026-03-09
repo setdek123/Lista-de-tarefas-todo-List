@@ -72,13 +72,14 @@ function App() {
   return (
     <>
       <div className="flex h-screen flex-col items-center bg-white">
-        <div className="mt-10 md:mt-30">
-          <h1 className="md:text-6xl text-3xl font-extrabold text-gray-700">Todo List</h1>
+        <div className="mt-10 md:mt-40">
+          <h1 className="md:text-6xl text-3xl font-extrabold text-gray-700">Lista de Tarefas</h1>
         </div>
-        <form onSubmit={addTasks} className="flex mt-15 w-90 md:w-120 items-center shadow-lg border border-gray-200 justify-center p-5 gap-5">
-            <input  type="text" className=" border border-gray-300 p-2 w-80  outline-none" 
+        <form onSubmit={addTasks} className="flex md:mt-20 mt-16 rounded-md w-90 md:w-120 items-center shadow-lg border border-gray-200 justify-center p-5 gap-5">
+            <input  type="text" className=" border border-gray-300 p-2 w-80   outline-none" 
               onChange={(e)=>setTextItems(e.target.value)}
               value={textItens}
+              placeholder="Digite sua tarefa..."
             />
             <button className=" md:flex hidden p-2 rounded-md border border-gray-200 bg-gray-200">Add Task</button>
         </form>
@@ -94,9 +95,10 @@ function App() {
                   <div className="bg-[#24242488] absolute h-screen w-screen p-3 flex items-center justify-center" >
                       <form className="bg-white p-3 rounded-md flex items-center justify-center gap-3">
                           <input type="text"
-                          value={newTask}
-                              onChange={(e)=>setNewTask(e.target.value)} 
-                              className="shadow-lg border p-3 border-gray-200 outline-none w-100"
+                            value={newTask}
+                            placeholder="Escolha e pressione Enter..."
+                            onChange={(e)=>setNewTask(e.target.value)} 
+                            className="shadow-lg border p-3 border-gray-200 outline-none w-100"
                           />
                           {tasks.map((item, index)=>(
                             <div key={index}>
